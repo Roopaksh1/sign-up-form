@@ -20,6 +20,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: open-sans;
+}
+
 .wrapper {
   display: flex;
 }
@@ -44,7 +48,7 @@
 }
 
 .logo p {
-  font-size: 15rem;
+  font-size: 14rem;
   color: white;
   font-family: norse;
 }
@@ -62,14 +66,67 @@
   background-color: var(--grey);
 }
 
+.description p {
+  font-weight: bold;
+  font-size: 3rem;
+  width: 80%;
+  margin: 10rem 0 0 5rem;
+  text-align: left;
+  word-break: break-word;
+}
+
 .form-wrapper {
   position: relative;
   flex: 1 1 0;
   background-color: white;
-  box-shadow: 1px 1px 5px black
+  box-shadow: 1px 1px 5px black;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  padding: 3rem 0 0 5rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+form {
+  width: 80%;
+  padding: 0 0 3rem 5rem;
+  flex: 1 1 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label {
+  font-family: sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: block;
+  font-size: 1.5rem;
+}
+
+input {
+  height: 3rem;
+  width: 30rem;
+  margin-bottom: 3.5rem;
 }
 
 .submit-btn-wrapper {
-  flex: 1 1 0;
+  flex: 0.5 1 0;
   background-color: var(--grey);
+}
+
+.submit-btn-wrapper button {
+  width: 30rem;
+  height: 6rem;
+  font-size: 2rem;
+  border-radius: 1.5rem;
+  margin: 3rem 0 0 5rem;
+}
+
+.submit-btn-wrapper p {
+  margin: 3rem 0 0 5rem;
+  font-size: 2rem;
 }

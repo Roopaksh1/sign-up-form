@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/e5e5f9413c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/e5e5f9413c.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js" defer></script>
     <title>Sign Up Form</title>
   </head>
@@ -13,19 +16,42 @@
     <div class="wrapper">
       <div class="background">
         <div class="logo">
-          <img src="assets/images/Wolf.png">
+          <img src="assets/images/Wolf.png" />
           <p>WOLF</p>
         </div>
       </div>
       <div class="main">
         <div class="description">
-
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            now to get started. <br> <br> You know you want to.
+          </p>
         </div>
         <div class="form-wrapper">
-
+          <h1>Let's do this!</h1>
+          <form id="account" action="">
+            <p>
+              <label for="first-name">FIRST NAME</label>
+              <input type="text" id="first-name" name="first-name" required>
+              <label for="email">EMAIL</label>
+              <input type="email" id="email" name="email" pattern="" required>
+              <label for="pass">PASSWORD</label>
+              <input type="password" id="pass" name="pass" pattern="" required>
+            </p>
+            <p>
+              <label for="last-name">LAST NAME</label>
+              <input type="text" id="last-name" name="last-name" required>
+              <label for="phone-number">PHONE NUMBER</label>
+              <input type="tel" id="phone-number" name="phone-number" pattern="" required>
+              <label for="confirm-pass">CONFIRM PASSWORD</label>
+              <input type="password" id="confirm-pass" name="confirm-pass" pattern="" required>
+            </p> 
+          </form>
         </div>
         <div class="submit-btn-wrapper">
-
+          <button type="submit" form="account">Create Account</button>
+          <p>Already have an account? <a href="">Log in</a></p>
         </div>
       </div>
     </div>
