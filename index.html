@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/e5e5f9413c.js"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
     <title>Sign Up Form</title>
   </head>
   <body>
@@ -31,27 +31,39 @@
         <div class="form-wrapper">
           <h1>Let's do this!</h1>
           <form id="account" action="">
-            <p>
-              <label for="first-name">FIRST NAME</label>
-              <input type="text" id="first-name" name="first-name" required>
-              <label for="email">EMAIL</label>
-              <input type="email" id="email" name="email" pattern="" required>
-              <label for="pass">PASSWORD</label>
-              <input type="password" id="pass" name="pass" pattern="" required>
-            </p>
-            <p>
-              <label for="last-name">LAST NAME</label>
-              <input type="text" id="last-name" name="last-name" required>
-              <label for="phone-number">PHONE NUMBER</label>
-              <input type="tel" id="phone-number" name="phone-number" pattern="" required>
-              <label for="confirm-pass">CONFIRM PASSWORD</label>
-              <input type="password" id="confirm-pass" name="confirm-pass" pattern="" required>
-            </p> 
+            <div class="data-grp">
+              <div class="data">
+                <input type="text" id="first-name" name="first-name" placeholder="FIRST NAME"  pattern="[a-zA-Z]+" required>
+                <label for="first-name">FIRST NAME</label>
+              </div>
+              <div class="data">
+                <input type="email" id="email" name="email" pattern="[\dA-Za-z\.-]+@[A-Za-z\d-]+\.[a-z]{2,8}(\.[a-z]{2,8})?" placeholder="EMAIL" required>
+                <label for="email">EMAIL</label>
+              </div>
+              <div class="data">
+                <input type="password" id="pass" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*" placeholder="PASSWORD" required>
+                <label for="pass">PASSWORD</label>
+              </div>
+            </div>
+            <div class="data-grp">
+              <div class="data">
+                <input type="text" id="last-name" name="last-name" placeholder="LAST NAME" pattern="[a-zA-Z]+" required>
+                <label for="last-name">LAST NAME</label>
+              </div>
+              <div class="data">
+                <input type="tel" id="phone-number" name="phone-number" pattern="\d{10,11}" placeholder="PHONE NUMBER" required>
+                <label for="phone-number">PHONE NUMBER</label>
+              </div>
+              <div class="data">
+                <input type="password" id="confirm-pass" name="confirm-pass" placeholder="CONFIRM PASSWORD" required>
+                <label for="confirm-pass">CONFIRM PASSWORD</label>
+              </div>
+            </div> 
           </form>
         </div>
         <div class="submit-btn-wrapper">
           <button type="submit" form="account">Create Account</button>
-          <p>Already have an account? <a href="">Log in</a></p>
+          <p>Already have an account? <a href="#account">Log in</a></p>
         </div>
       </div>
     </div>

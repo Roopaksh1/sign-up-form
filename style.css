@@ -76,7 +76,6 @@ body {
 }
 
 .form-wrapper {
-  position: relative;
   flex: 1 1 0;
   background-color: white;
   box-shadow: 1px 1px 5px black;
@@ -92,25 +91,92 @@ h1 {
 
 form {
   width: 80%;
-  padding: 0 0 3rem 5rem;
+  padding-left: 5rem;
   flex: 1 1 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+
+.data-grp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.data {
+  position: relative;
 }
 
 label {
+  position: absolute;
   font-family: sans-serif;
-  font-weight: bold;
   letter-spacing: 1px;
-  display: block;
   font-size: 1.5rem;
+  letter-spacing: 2px;
+  opacity: 0;
+  cursor: text;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 input {
   height: 3rem;
   width: 30rem;
   margin-bottom: 3.5rem;
+  border: none;
+  outline: none;
+  border-bottom: solid black 2px;
+  font-size: 2rem;
+}
+
+input:not(:placeholder-shown) + label {
+  opacity: 1;
+  top: -2rem;
+  left: 0;
+}
+
+input:not(:placeholder-shown):not(:focus):invalid {
+  border-color: red;
+}
+
+input:not(:placeholder-shown):not(:focus):invalid + label::before {
+  position: absolute;
+  top: 6rem;
+  width: 40rem;
+  color: red;
+}
+
+#email:not(:placeholder-shown):not(:focus):invalid + label::before {
+  content: "Please enter valid email";
+}
+
+#first-name:not(:placeholder-shown):not(:focus):invalid + label::before, #last-name:not(:placeholder-shown):not(:focus):invalid + label::before {
+  content: "Please enter valid name"; 
+}
+
+#email:not(:placeholder-shown):not(:focus):invalid + label::before {
+  content: "Please enter valid email"; 
+}
+
+#phone-number:not(:placeholder-shown):not(:focus):invalid + label::before {
+  content: "Please enter valid phone number"; 
+}
+
+#pass:not(:placeholder-shown):not(:focus):invalid + label::before {
+  content: "Password should contain at least one UpperCase, LowerCase and Number"; 
+}
+
+.confirm-pass + label::before {
+  position: absolute;
+  top: 6rem;
+  width: 40rem;
+  content: "Password must match";
+  color: red;
+}
+
+.confirm-pass:focus + label::before {
+  content: "";
 }
 
 .submit-btn-wrapper {
@@ -118,15 +184,33 @@ input {
   background-color: var(--grey);
 }
 
-.submit-btn-wrapper button {
+button {
   width: 30rem;
   height: 6rem;
   font-size: 2rem;
   border-radius: 1.5rem;
   margin: 3rem 0 0 5rem;
+  background-color: #596D48;
+  color: white;
+  cursor: pointer;
 }
+
+button:active {
+  background-color: green;
+}
+
 
 .submit-btn-wrapper p {
   margin: 3rem 0 0 5rem;
   font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #596D48;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
 }
