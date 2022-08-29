@@ -11,13 +11,14 @@
 - HTML Form
 - Client side form validation
 
-## Credits
+## Acknowledgements
 
-#### The Odin Project:
+- Made as a solution for the sign up form project on [The Odin Project]
 
-Website : https://www.theodinproject.com Github : https://github.com/TheOdinProject/theodinproject
 
-#### Images Featured:
-leaf-plant: https://unsplash.com/photos/25xggax4bSA
+- Images Featured:
+  - leaf-plant: https://unsplash.com/photos/25xggax4bSA
 
-Wolf: https://www.pngitem.com/middle/xoxiTi_blue-gray-wolf-drawing-logo-free-download-png/
+  - Wolf: https://www.pngitem.com/middle/xoxiTi_blue-gray-wolf-drawing-logo-free-download-png/
+
+[The Odin Project]: <https://www.theodinproject.com>
